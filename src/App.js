@@ -1,25 +1,27 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+// @flow
+import * as React from 'react';
+import styles from './App.module.css';
+import Guess from './Guess'
+import type GuessType from './Guess';
+import AddGuess from './AddGuess'
 
-class App extends Component {
+type State = {
+  guesses: Array<GuessType>
+};
+
+class App extends React.Component<{}, State> {
+  state = {
+    guesses: [
+      [2, 4, 8, true]
+    ]
+  }
+  addGuess = (a, b, c) => this.setState(state => ({ guesses: [...state.guesses, [a, b, c, a < b && b < c]]}))
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div className={styles.container}>
+        {this.state.guesses.map((guess, i) => <Guess key={i} guess={guess}/>)}
+        <AddGuess addGuess={this.addGuess} />
       </div>
     );
   }
