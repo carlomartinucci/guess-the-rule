@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.2/workbox-sw.js");
 
 importScripts(
-  "/guess-the-rule/precache-manifest.63202aa2dec22711963105301ffce21d.js"
+  "/guess-the-rule/precache-manifest.f4e2967810e6cba6603f1d3e34580957.js"
 );
 
 workbox.clientsClaim();
