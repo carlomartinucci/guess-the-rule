@@ -7,3 +7,17 @@
   font-size: 10vmin;
   color: #f5f0f3;
 }
+
+.titleContainer {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  background-color: #123456;
+  width: 100%;
+  text-align: center;
+  line-height: 20vmin;
+  height: 20vmin;
+}
+
+.title {
+  margin: 0;
+  font-size: 13vmin;
+}

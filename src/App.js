@@ -20,6 +20,9 @@ class App extends React.Component<{}, State> {
   render() {
     return (
       <div className={styles.container}>
+        <div className={styles.titleContainer}>
+          <h1 className={styles.title}>Guess the rule</h1>
+        </div>
         {this.state.guesses.map((guess, i) => <Guess key={i} guess={guess}/>)}
         <AddGuess addGuess={this.addGuess} />
       </div>
