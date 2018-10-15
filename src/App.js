@@ -15,7 +15,7 @@ class App extends React.Component<{}, State> {
       [2, 4, 8, true]
     ]
   }
-  addGuess = (a, b, c) => this.setState(state => ({ guesses: [...state.guesses, [a, b, c, a < b && b < c]]}))
+  addGuess = (a, b, c) => this.setState(state => ({ guesses: [...state.guesses, [a, b, c, a < b]]}))
 
   render() {
     return (
