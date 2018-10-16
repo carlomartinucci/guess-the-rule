@@ -21,7 +21,7 @@ class AddGuessContainer extends React.Component<Props, State> {
   setInput = (letter: string) => event => this.setState({ [letter]: event.currentTarget.value })
   addGuess = event => {
     if (this.state.a && this.state.b && this.state.c) {
-      this.props.addGuess(this.state.a, this.state.b, this.state.c)
+      this.props.addGuess(parseInt(this.state.a), parseInt(this.state.b), parseInt(this.state.c))
       this.setState({a: '', b: '', c: ''})
     }
   }
